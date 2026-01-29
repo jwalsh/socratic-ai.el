@@ -1,1 +1,33 @@
-# socratic-ai
+#+title: socratic-ai.el
+#+author: Jason Walsh
+
+Examine buffer contents through Socratic questioning using Ollama.
+
+* Requirements
+
+- Emacs 25.1+
+- [[https://ollama.ai][Ollama]] running locally
+
+* Installation
+
+#+begin_src emacs-lisp
+(use-package socratic-ai
+  :load-path "path/to/socratic-ai.el/src")
+#+end_src
+
+* Usage
+
+~M-x socratic-ai-examine-buffer~
+
+Sends the current buffer to Ollama and displays probing questions in a side window.
+
+* Configuration
+
+#+begin_src emacs-lisp
+(setq socratic-ai-model "mistral")           ; Ollama model
+(setq socratic-ai-endpoint "http://localhost:11434")
+#+end_src
+
+* License
+
+Apache 2.0
